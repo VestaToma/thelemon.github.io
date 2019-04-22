@@ -1,0 +1,125 @@
+.main-bottom {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 438px;
+    background-color: #ffffff;
+    @include m-b (50px);
+    padding-right: 70px;
+    box-shadow: $box-shadow;
+    @include min-width (320px);
+
+    @media (max-width: 975px) {
+        flex-direction: column;
+        width: 90%;
+        height: 80%;
+        margin: 30px auto;
+        padding-bottom: 20px;
+
+    }
+
+    &__img {
+        img {
+            @media (max-width: 580px) {
+                width: 100%;
+            }
+        }
+        @media (max-width: 975px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 70px;
+        }
+    }
+
+    &__content {
+        padding-left: 35px;
+    }
+
+    &__content-header {
+        font: 400 32px/1.2 'PlayfairDisplay-Black';
+        letter-spacing: 0.8px;
+        color: #055555;
+        margin-top: 20px;
+    }
+
+    &__content-top {
+        display: flex;
+        flex-direction: row;
+        margin-top: 30px;
+        justify-content: space-between;
+        @include m-b (30px);
+
+        p {
+            font: 300 16px/1.2 'JosefinSans-Light';
+            letter-spacing: 0.4px;
+        }
+
+        img {
+            height: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+
+    &__content-top-link {
+        &:hover {
+            text-shadow: 1px 1px 1px grey;
+        }
+
+        &:active {
+            text-shadow: none;
+        }
+    }
+
+    &__content-top-button {
+        width: 105px;
+        height: 20px;
+        border: 1px solid rgb(189, 184, 184);
+        text-transform: uppercase;
+        font: 300 12px/1.2 'JosefinSans-Light';
+        outline: none;
+        letter-spacing: 0.3px;
+        
+
+        &:hover {
+            box-shadow: $box-shadow;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        &:active {
+            box-shadow: none;
+            background-color: $background-color;
+        }
+    }
+
+    &__content-bottom {
+        display: flex;
+        flex-direction: column;
+        font: 300 14px/1.2 'JosefinSans-Light';
+
+        @media (max-width: 1080px) {
+            font-size: 13px;
+        }
+
+        @media (max-width: 1010px) {
+            font-size: 12px;
+        }
+
+        @media (max-width: 975px) {
+            font-size: 14px;
+        }
+
+    }
+
+    &__content-bottom-middle {
+        font-weight: bold;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+}

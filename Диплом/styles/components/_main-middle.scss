@@ -1,0 +1,46 @@
+.main-middle {
+    width: 100%;
+    height: 370px;
+    background-color: #ffffff;
+    margin-top: 85px;
+    @include m-b (85px);
+    box-shadow: $box-shadow;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 10px;
+    font: 300 16px/1.2 'JosefinSans-Light';
+    @include min-width (320px);
+
+    @media (max-width: 975px) {
+        flex-direction: column;
+        width: 90%;
+        height: 70%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin: 20px auto;
+    }
+
+    &__img {
+        &:hover {
+            transform: scale(1.1);
+            transition: 0.25s;
+            @include m-b (10px);
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+
+        &:hover {
+            text-shadow: 1px 1px 1px grey;
+        }
+
+        &:active {
+            text-shadow: none;
+        }
+    }
+}

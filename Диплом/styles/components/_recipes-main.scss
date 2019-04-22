@@ -1,0 +1,133 @@
+.main-cards {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font: 500 17px/1.2 'JosefinSans-Light';
+    @include min-width (320px);
+    
+
+    &__card {
+        width: 350px;
+        @include min-width (320px);
+        height: 350px;
+        background-color: #ffffff;
+        box-shadow: $box-shadow;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 30px 10px 30px;
+
+        @media (max-width: 1075px) {
+            &:nth-child(n+1) {
+                margin-left: 2%;
+                margin-right: 2%;
+            }
+        }
+
+        &:nth-child(n+1) {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        } 
+
+        a {
+            text-decoration: none;
+            color: #000000;
+
+            &:hover {
+                transition: 0.1s;
+                transform: scale(1.1);
+                text-shadow: 1px 1px 1px grey;
+            }
+
+            &:active {
+                text-shadow: none;
+            }
+        }
+    }
+
+
+    &__card-content {
+        display: flex;
+        flex-direction: column;
+         
+    }
+
+    &__card-content-header {
+        font-weight: 700;
+        font-size: 18px;
+        letter-spacing: 0.8px;
+    }
+
+    &__card-content-text {
+        width: 290px;
+        height: 100px;
+        margin-top: 10px;
+    }
+
+    &__card-button {
+        width: 105px;
+        height: 20px;
+        border: 1px solid rgb(189, 184, 184);
+        text-transform: uppercase;
+        
+        outline: none;
+        letter-spacing: 0.3px;
+
+        &:hover {
+            box-shadow: 0 0 5px rgba(11, 12, 12, 0.15);
+            background-color: white;
+            cursor: pointer;
+        }
+
+        &:active {
+            box-shadow: none;
+            background-color: #f8f8f8;
+        }
+    }
+}
+
+.navigation {
+    max-width: 1120px;
+    width: 100%;
+    height: 90px;
+    background-color: #ffffff;
+    box-shadow: 0 0 13px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    @include min-width (320px);
+
+    &__buttons {
+        display: flex;
+        flex-direction: row;
+
+        div {
+            margin-right: 35px;
+            font: 300 18px/1.2 'JosefinSans-Light';
+
+            a {
+                text-decoration: none;
+                color: #000000;
+            }
+
+            &:hover {
+                transition: 0.1s;
+                transform: scale(1.3);
+                text-shadow: 1px 2px 1px grey;
+            }
+    
+            &:active {
+                text-shadow: none;
+            }
+        }
+
+        
+    }
+}

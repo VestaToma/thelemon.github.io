@@ -1,0 +1,7 @@
+@mixin m-b ($margin-bottom) {
+    margin-bottom: $margin-bottom;  
+}
+
+@mixin min-width ($min-width) {
+    min-width: $min-width;
+}

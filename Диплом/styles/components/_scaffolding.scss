@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #eaeaea;
+}
+
+main {
+    min-height: 100vh;
+    flex-grow: 1;
+}
+
+.content {
+    max-width: 1120px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+button {
+    border: 0;
+    background: none;
+}

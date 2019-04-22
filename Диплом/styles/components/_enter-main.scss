@@ -1,0 +1,202 @@
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    @include min-width (320px);
+    margin-bottom: 30px;
+
+    @media (max-width: 665px) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__login {
+        display: flex;
+        flex-direction: column;
+        width: 330px;
+        height: 450px;
+        background-color: #ffffff;
+        box-shadow: $box-shadow;
+        align-items: center;
+
+        @media (max-width: 665px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__login-header {
+        font: 700 20px/1.2 'JosefinSans-Regular';
+        letter-spacing: 0.5px;
+        position: relative;
+        align-self: flex-start;
+        margin: 20px 0 30px 30px;
+        padding-bottom: 10px;
+
+        &::after {
+            content: '';
+            border-bottom: 2px solid #dddddd;
+            width: 265px;
+            position: absolute;
+            top: 100%;
+            left: 0;
+        }
+    }
+
+    &__login-check-field {
+        font: 400 16px/1.2 'JosefinSans-Regular';
+        margin-bottom: 20px;
+    }
+
+    &__login-check-field-header {
+        font: 600 16px/1.2 'JosefinSans-Light';
+        letter-spacing: 0.4px;
+
+        span {
+            text-transform: uppercase;
+        }
+    }
+
+    &__login-check-field-login-and-password {
+        width: 265px;
+        height: 40px;
+        border: 1px solid #c2c2c2;
+        background-color: #ffffff;
+        padding-left: 20px;
+        outline: none;
+        margin-top: 20px;
+        color: grey;
+
+        &::-webkit-input-placeholder {
+            color: #dbdada;
+        }
+
+        &:focus {
+            box-shadow: inset 1px 2px 7px rgba(11, 12, 12, 0.37);
+        }
+    }
+
+    &__login-check-field-checkbox {
+        font-size: 12px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 10px;
+
+        p {
+            margin-top: 5px;
+            a {
+                text-decoration: none;
+                color: #c2c2c2;
+
+                &:hover {
+                    font-weight: bold;
+                }
+
+                &:active {
+                    font-weight: 400;
+                }
+            }
+
+        }
+
+        label {
+            position: relative;
+            color: $color;
+            font-weight: bold;
+
+            span::before {
+                content: '';
+                position: absolute;
+                width: 11px;
+                height: 10px;
+                border: 1px solid $color;
+                top: 33%;
+                left: 0;
+                border-radius: 3px;
+            }
+
+            span::after {
+                content: '';
+                width: 3px;
+                height: 5px;
+                border-bottom: 1px solid grey;
+                border-right: 1px solid grey;
+                transform: rotate(45deg);
+                position: absolute;
+                top: 40%;
+                left: 5%;
+                opacity: 0;
+
+            }
+            input {
+                visibility: hidden;
+
+                &:checked + span::after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &__login-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }  
+    &__login-bottom-button {
+        width: 105px;
+        height: 30px;
+        border: 1px solid $color;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 300;
+        margin-bottom: 25px;
+        outline: none;
+
+        &:hover {
+            box-shadow: $box-shadow;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        &:active {
+            box-shadow: none;
+            background-color: #f8f8f8;
+        }
+    }       
+    
+    &__login-bottom-icons {
+        margin-right: 25px;
+    }
+
+    &__login-bottom-end {
+        font: 400 16px/1.2 'JosefinSans-Regular';
+        color: #000000;
+        opacity: 0.54;
+        letter-spacing: 0.4px;
+        margin-top: 10px;
+
+        a {
+            text-decoration: none;
+
+            &:hover {
+                text-shadow: 1px 1px 1px grey;
+            }
+    
+            &:active {
+                text-shadow: none;
+            }
+        }
+    }
+
+    &__sign-in {
+        display: flex;
+        flex-direction: column;
+        width: 330px;
+        height: 450px;
+        background-color: #ffffff;
+        box-shadow: $box-shadow;
+        align-items: center;
+    }
+
+}

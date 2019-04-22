@@ -1,0 +1,82 @@
+
+.section {
+    @include min-width (320px);
+}
+
+.main-top {
+    width: 100%;
+    height: 430px;
+    display: flex;
+    flex-direction: column;
+    background: url("styles/images/photo-main.png") no-repeat;
+    justify-content: center;
+    padding-left: 40px;
+    margin-top: 85px;
+    box-shadow: $box-shadow;
+
+    &__slide {
+        width: 100%;
+        height: 430px;
+        display: flex;
+        flex-direction: column;
+        background: url("styles/images/cookies.jpg") no-repeat;
+        justify-content: center;
+        padding-left: 40px;
+        margin-top: 85px;
+        box-shadow: $box-shadow;
+    }
+
+    &__last-slide {
+        width: 100%;
+        height: 430px;
+        display: flex;
+        flex-direction: column;
+        background: url("styles/images/cookies-for-christmas.jpg") no-repeat;
+        justify-content: center;
+        padding-left: 40px;
+        margin-top: 85px;
+        box-shadow: $box-shadow;
+    }
+    
+    
+
+    &__img {
+        @include m-b (35px);
+    }
+
+    &__header {
+        font: 400 24px/1.2 'PlayfairDisplay-Regular';
+        letter-spacing: 0.6px;
+        color: #921026;
+        @include m-b (30px);
+    }
+
+    &__text {
+        width: 310px;
+        height: 90px;
+        font: 300 16px/1.2 'JosefinSans-Light';
+        letter-spacing: 0.4px;
+        @include m-b (35px);
+    }
+
+    &__button {
+        width: 105px;
+        height: 30px;
+        border: 1px solid rgb(189, 184, 184);
+        text-transform: uppercase;
+        font: 300 12px/1.2 'JosefinSans-Light';
+        outline: none;
+
+        &:hover {
+            box-shadow: 0 0 5px rgba(11, 12, 12, 0.15);
+            background-color: $background-color;
+            cursor: pointer;
+        }
+
+        &:active {
+            box-shadow: none;
+            background-color: $background-color;
+        }
+    }
+
+}
